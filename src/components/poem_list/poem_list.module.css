@@ -1,0 +1,38 @@
+.PoemListSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.List {
+  margin: 0 22%;
+}
+
+.Loading {
+  display: flex;
+  position: absolute;
+  top: 0;
+  background: #0000009a;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.GetButton {
+  margin: 32px;
+  padding: 6px 16px;
+  font-size: 17px;
+  background: cornflowerblue;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Sort {
+  margin-top: 16px !important;
+}

@@ -1,0 +1,34 @@
+.Header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #3059a3;
+  width: 100vw;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px #ccc;
+}
+
+.Title {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.SubTitle {
+  color: #ccc;
+}
+
+.RightItem,
+.LeftItem {
+  position: absolute;
+  top: 25%;
+}
+
+.RightItem {
+  right: 32px;
+}
+.LeftItem {
+  left: 32px;
+}
