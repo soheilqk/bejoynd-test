@@ -1,6 +1,6 @@
 # Getting Started with Bejoyn poems
 ### 1. Clone project:
-opne a CMD where you want to store project and run `git clone https://github.com/soheilqk/bejoynd-test.git`.
+open a CMD where you want to store project and run `git clone https://github.com/soheilqk/bejoynd-test.git`.
   
 ### 2. install dependencies: 
 run command `npm i`.
