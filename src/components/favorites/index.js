@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { inject, observer } from "mobx-react";
 import Header from "../header/header";
 import styles from "./favorites.module.css";
@@ -10,6 +10,11 @@ import { useNavigate } from "react-router";
 const Favorites = inject((stores) => stores)(
   observer(({ store }) => {
     const navigate = useNavigate();
+    const [favorites, setFavorites] = useState([]);
+
+    useEffect(() => {
+      setFavorites(store.getFavorites());
+    }, []);
 
     const backButton = (
       <IconButton onClick={() => navigate(-1)}>
@@ -21,9 +26,13 @@ const Favorites = inject((stores) => stores)(
       <div>
         <Header title="favorites" leftItem={backButton} />
         <div className={styles.FavoritesSection}>
-          {store.getFavorites().map((poem) => (
-            <PoemItem key={Math.random(9999)} poem={poem} />
-          ))}
+          {favorites.length <= 0 ? (
+            <p className={`Text ${styles.NoFavorites}`}>No favorites yet</p>
+          ) : (
+            favorites.map((poem) => (
+              <PoemItem key={Math.random(9999)} poem={poem} />
+            ))
+          )}
         </div>
       </div>
     );

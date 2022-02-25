@@ -1,3 +1,8 @@
 .FavoritesSection {
-  margin: 0 22%;
+  margin: 16px 22% 0 22%;
+}
+
+.NoFavorites {
+  text-align: center;
+  font-size: 20px;
 }
